@@ -5,13 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'ffaker'
-
-
-skills = FFaker::Skill.specialties(num = 400).each do |skill| 
-  [skill]
-end
-
-skills.uniq.each do |skill|
-  Skill.create(name: skill)
-end
