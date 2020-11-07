@@ -1,0 +1,53 @@
+client/node_modules
+client/.pnp
+client/.pnp.js
+
+# testing
+client//coverage
+
+# next.js
+client/.next/
+client/out/
+
+# production
+client/build
+
+# misc
+client/.DS_Store
+client/*.pem
+
+# debug
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+
+# local env files
+client/.env.local
+client/.env.development.local
+client/.env.test.local
+client/.env.production.local
+
+# vercel
+client/.vercel
+
+
+server/.bundle
+
+# Ignore all logfiles and tempfiles.
+server/log/*
+server/tmp/*
+server/log/.keep
+server/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+server/tmp/pids/*
+server/tmp/pids/
+server/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+server/storage/*
+server/storage/.keep
+server/.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+server/config/master.key
