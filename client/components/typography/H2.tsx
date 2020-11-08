@@ -7,5 +7,4 @@ export const H2 = styled.h2`
   font-size: 52px;
   line-height: 64px;
   letter-spacing: -1.5px;
-  color: #C4C4C4;
 `;

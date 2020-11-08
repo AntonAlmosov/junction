@@ -6,5 +6,4 @@ export const Caption = styled.caption`
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
-  color: #C4C4C4;
 `;

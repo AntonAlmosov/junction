@@ -1,4 +1,4 @@
-import style from "styled-components";
+import styled from "styled-components";
 
 export const Button = styled.button`
   font-family: Muller;
@@ -6,5 +6,4 @@ export const Button = styled.button`
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #C4C4C4;
 `;

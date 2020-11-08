@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Overline = styled.overline`
+export const Overline = styled.span`
   font-family: Muller;
   font-style: normal;
   font-weight: 500;
@@ -8,5 +8,4 @@ export const Overline = styled.overline`
   line-height: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #C4C4C4;
 `;

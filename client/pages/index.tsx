@@ -1,7 +1,12 @@
 import Head from "next/head";
 import styled from "styled-components";
+import Link from "next/link";
+import { DefaultButton } from "../components/controls/DefaultButton";
+import { DefaultInput } from "../components/controls/Input";
 import { FullWrapper } from "../components/misc/FullWrapper";
 import { Logo } from "../components/misc/Logo";
+import { H3 } from "../components/typography/H3";
+import { Paragraph } from "../components/typography/Paragraph";
 
 export default function Home() {
   return (
@@ -14,8 +19,28 @@ export default function Home() {
           <LoginInnerWrapper>
             <Logo />
             <LoginFormWrapper>
-              <LoginFormHeader></LoginFormHeader>
-              <LoginFormInputWrapper></LoginFormInputWrapper>
+              <LoginFormHeader>
+                <H3>Create account</H3>
+                <LoginFormHeaderParagph>
+                  Please sign up to your personal account if you want to use all
+                  our premium products
+                </LoginFormHeaderParagph>
+              </LoginFormHeader>
+              <LoginFormInputWrapper>
+                <LoginInput
+                  placeholder={"johndoe@email.com"}
+                  onChange={() => {}}
+                  label={"Your email"}
+                />
+                <LoginInput
+                  placeholder={"Enter your password"}
+                  onChange={() => {}}
+                  label={"Password"}
+                />
+              </LoginFormInputWrapper>
+              <Link href="">
+                <LoginSubmitButton />
+              </Link>
             </LoginFormWrapper>
           </LoginInnerWrapper>
         </LoginWrapper>
@@ -50,6 +75,16 @@ const LoginFormHeader = styled.div`
     margin-bottom: 6px;
   }
 `;
+
+const LoginSubmitButton = styled(DefaultButton)`
+  margin-top: 24px;
+`;
+
+const LoginFormHeaderParagph = styled(Paragraph)`
+  color: #252631;
+`;
+
+const LoginInput = styled(DefaultInput)``;
 
 const LoginFormInputWrapper = styled.div`
   margin-top: 35px;

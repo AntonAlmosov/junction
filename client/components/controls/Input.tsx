@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Paragraph2 } from "../typography/Paragraph2";
 
 export const DefaultInput = ({
   label,
@@ -14,7 +15,7 @@ export const DefaultInput = ({
 }) => {
   return (
     <DefaultInputWrapper>
-      <span>{label}</span>
+      <Paragraph2>{label}</Paragraph2>
       <Input
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
@@ -24,8 +25,9 @@ export const DefaultInput = ({
   );
 };
 
-const DefaultInputWrapper = styled.div`
+export const DefaultInputWrapper = styled.div`
   width: 100%;
+  margin-bottom: 20px;
 `;
 
 const Input = styled.input`

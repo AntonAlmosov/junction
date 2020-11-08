@@ -5,5 +5,4 @@ export const H1 = styled.h1`
   font-size: 64px;
   line-height: 80px;
   letter-spacing: -1.5px;
-  color: #C4C4C4;
 `;
