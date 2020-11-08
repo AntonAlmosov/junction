@@ -8,11 +8,11 @@ export const DefaultButton = styled.div`
   align-items: center;
   font-weight: 500;
   font-size: 13px;
-  line-height: 16px;
   letter-spacing: 1px;
   color: black;
   border-radius: 4px;
   background-color: #ffc81a;
   cursor: pointer;
   user-select: none;
+  font-family: Muller;
 `;

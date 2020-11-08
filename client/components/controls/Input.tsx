@@ -7,11 +7,13 @@ export const DefaultInput = ({
   placeholder,
   onChange,
   defaultValue,
+  type,
 }: {
   label: string;
   placeholder: string;
   onChange: (value: string) => void;
   defaultValue?: string;
+  type?: string;
 }) => {
   return (
     <DefaultInputWrapper>
@@ -20,6 +22,7 @@ export const DefaultInput = ({
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         defaultValue={defaultValue}
+        type={type || "text"}
       />
     </DefaultInputWrapper>
   );

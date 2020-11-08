@@ -1,18 +1,37 @@
+import React from "react";
 import Head from "next/head";
 import styled from "styled-components";
-import Link from "next/link";
+import { useRouter } from "next/router";
 import { DefaultButton } from "../components/controls/DefaultButton";
 import { DefaultInput } from "../components/controls/Input";
 import { FullWrapper } from "../components/misc/FullWrapper";
 import { Logo } from "../components/misc/Logo";
 import { H3 } from "../components/typography/H3";
 import { Paragraph } from "../components/typography/Paragraph";
+// import Axios from "axios";
+// import { serverUrl } from "../components/Variables";
 
 export default function Home() {
+  const router = useRouter();
+  const [email, setEmail] = React.useState<string | null>(null);
+  const [password, setPassword] = React.useState<string | null>(null);
+
+  const submitForm = () => {
+    if (!email || !password) {
+      return;
+    }
+    // Axios.post(serverUrl + "/users/sign_up", {
+    //   email,
+    //   password,
+    // }).then((res) => {
+    // });
+    router.push("/onboarding/start");
+  };
+
   return (
     <div>
       <Head>
-        <title>Some name</title>
+        <title>Soulmeter — Sign Up</title>
       </Head>
       <FullWrapper>
         <LoginWrapper>
@@ -29,18 +48,20 @@ export default function Home() {
               <LoginFormInputWrapper>
                 <LoginInput
                   placeholder={"johndoe@email.com"}
-                  onChange={() => {}}
+                  onChange={setEmail}
                   label={"Your email"}
+                  type={"email"}
                 />
                 <LoginInput
                   placeholder={"Enter your password"}
-                  onChange={() => {}}
+                  onChange={setPassword}
                   label={"Password"}
+                  type={"password"}
                 />
               </LoginFormInputWrapper>
-              <Link href="">
-                <LoginSubmitButton />
-              </Link>
+              <LoginSubmitButton onClick={submitForm}>
+                SIGN UP
+              </LoginSubmitButton>
             </LoginFormWrapper>
           </LoginInnerWrapper>
         </LoginWrapper>
