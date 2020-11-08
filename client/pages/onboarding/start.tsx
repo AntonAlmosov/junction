@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useRouter } from "next/router";
 import { DefaultButton } from "../../components/controls/DefaultButton";
 import { DefaultInput } from "../../components/controls/Input";
 import { OnboardingWrapper } from "../../components/misc/FullWrapper";
@@ -8,7 +9,10 @@ import { OnboardingHeading } from "../../components/misc/OnboardingHeading";
 import { Paragraph2 } from "../../components/typography/Paragraph2";
 
 export default function Start() {
-  const nextStep = () => {};
+  const router = useRouter();
+  const nextStep = () => {
+    router.push("/onboarding/personality");
+  };
   return (
     <OnboardingWrapper>
       <OnboardingHeading
