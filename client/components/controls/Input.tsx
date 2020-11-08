@@ -31,6 +31,9 @@ export const DefaultInput = ({
 export const DefaultInputWrapper = styled.div`
   width: 100%;
   margin-bottom: 20px;
+  p {
+    margin-bottom: 6px;
+  }
 `;
 
 const Input = styled.input`
